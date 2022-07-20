@@ -1,6 +1,6 @@
 <template>
-  <div class="left-side__container">
-    <h3 class="left-side__title">{{ title }}</h3>
+  <div class="left-side-title">
+    <h3 class="left-side-title__text">{{ title }}</h3>
   </div>
 </template>
 
@@ -11,21 +11,19 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.left-side {
-  &__container {
-    display: inline-block;
-    width: 100%;
-    max-width: 650px;
-    padding: 20px 20px 20px 0;
-    border-radius: 0 50px 50px 0;
-    background-color: $color-tertiary;
-    @include shadow;
-  }
+.left-side-title {
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+  padding: 15px 15px 15px 0;
+  border-radius: 0 50px 50px 0;
+  background-color: $color-tertiary;
+  @include shadow;
 
-  &__title {
-    @include font-title-2('desktop');
+  &__text {
+    @include font-title-3('desktop');
     width: 100%;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
     background-color: $color-secondary;
     color: $color-primary;
@@ -33,8 +31,8 @@ const props = defineProps({
     display: inline-block;
     text-transform: uppercase;
     @include shadow;
-    @media (max-width: $xs) {
-      @include font-title-2('mobile');
+    @media (max-width: $md) {
+      @include font-title-3('mobile');
     }
   }
 }
