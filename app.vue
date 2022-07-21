@@ -7,17 +7,15 @@
       <LanguageSection />
     </div>
     <div class="right-side">
-      <section class="right-side__header">
-        <section class="right-side__text">
+      <div class="right-side__header">
+        <div class="right-side__text">
           <span class="right-side__title">{{ name }}</span>
           <span class="right-side__subtitle">
             {{ position }}
           </span>
-        </section>
-        <!--        <section class="right-side__logo">-->
+        </div>
         <img class="right-side__logo" src="@/assets/image/photo.png" alt="logo" />
-        <!--        </section>-->
-      </section>
+      </div>
 
       <InformationSection />
     </div>
@@ -28,7 +26,7 @@
 import SkillsSection from '~/components/LeftSide/SkillsSection/SkillsSection.vue';
 import LanguageSection from '~/components/LeftSide/LanguageSection/LanguageSection.vue';
 import ContactSection from '~/components/LeftSide/ContactSection/ContactSection.vue';
-import LogoSection from '~/components/LeftSide/LogoSection.vue';
+import LogoSection from '~/components/LeftSide/LogoComponent.vue';
 import InformationSection from '~/components/RightSide/InformationSection.vue';
 
 import { useCVStore } from '~/store/store';

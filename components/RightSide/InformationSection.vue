@@ -5,9 +5,9 @@
       :title="'Обо мне'"
       :path-icon="iconPath('profile')"
     />
-    <section class="information-section">
+    <div class="information-section">
       <p class="information__text" v-for="item in aboutMe">{{ item }}</p>
-    </section>
+    </div>
     <ContactSectionMobile class="section-mobile" />
     <SkillsSectionMobile class="section-mobile" />
     <RightSideTitle

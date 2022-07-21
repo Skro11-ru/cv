@@ -1,7 +1,7 @@
 <template>
-  <section class="logo">
+  <div class="logo">
     <img class="logo__image" src="@/assets/image/photo.png" alt="logo" />
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts"></script>
