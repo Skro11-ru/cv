@@ -1,6 +1,6 @@
 <template>
   <section class="skills">
-    <RightSideTitle class="skills__title" :title="'Навыки'" :path-icon="iconPath('skills')" />
+    <RightSideTitle class="skills__title" :title="'Навыки'" :path-icon="iconPath('skill')" />
     <ul class="skills__list">
       <li class="skills__item">
         <img class="skills__icon" src="/assets/icon/skills/html.svg" alt="icon-html" />
@@ -47,8 +47,7 @@
 
 <script setup lang="ts">
 import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
-
-const iconPath = (nameIcon) => `/assets/icon/information/${nameIcon}.svg`;
+import iconPath from '~/iconPath';
 </script>
 
 <style lang="scss" scoped>

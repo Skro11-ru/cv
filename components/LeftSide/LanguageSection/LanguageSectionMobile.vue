@@ -7,11 +7,7 @@
     />
     <ul class="language__list">
       <li v-for="item in language" :key="item.id" class="language__item">
-        <img
-          class="language__flag"
-          :src="pathFlagLanguage(item.label)"
-          :alt="`${item.label}-flag`"
-        />
+        <img class="language__flag" :src="iconPath(item.label)" :alt="`${item.label}-flag`" />
         <span class="language__text"> {{ item.name }} - {{ item.level }} </span>
       </li>
     </ul>
@@ -20,11 +16,10 @@
 <script setup lang="ts">
 import { useCVStore } from '~/store/store';
 import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
+import iconPath from '~/iconPath';
 
 const store = useCVStore();
 const language = computed(() => store.getMyCV.language);
-const pathFlagLanguage = (label) => `/assets/icon/language/${label}.svg`;
-const iconPath = (nameIcon) => `/assets/icon/information/${nameIcon}.svg`;
 </script>
 
 <style lang="scss" scoped>

@@ -4,19 +4,23 @@
     <ul class="contacts__list">
       <li class="contacts__item">
         <div class="contacts__icon-wrap">
-          <img class="contacts__icon" src="/assets/icon/contact/phone.svg" alt="icon-phone" />
+          <img class="contacts__icon" src="/assets/icon/contacts/phone.svg" alt="icon-phone" />
         </div>
         <a class="contacts__link" :href="`tel:${contact.phone}`">{{ contact.phone }} </a>
       </li>
       <li class="contacts__item">
         <div class="contacts__icon-wrap">
-          <img class="contacts__icon" src="/assets/icon/contact/mail.svg" alt="icon-mail" />
+          <img class="contacts__icon" src="/assets/icon/contacts/mail.svg" alt="icon-mail" />
         </div>
         <a class="contacts__link" :href="`mailto:${contact.mail}`">{{ contact.mail }}</a>
       </li>
       <li class="contacts__item">
         <div class="contacts__icon-wrap">
-          <img class="contacts__icon" src="/assets/icon/contact/location.svg" alt="icon-location" />
+          <img
+            class="contacts__icon"
+            src="/assets/icon/contacts/location.svg"
+            alt="icon-location"
+          />
         </div>
         <a class="contacts__link" href="https://goo.gl/maps/VfAnnHVdovp5Mrxj6" target="_blank">
           {{ contact.address }}
@@ -24,7 +28,7 @@
       </li>
       <li class="contacts__item">
         <div class="contacts__icon-wrap">
-          <img class="contacts__icon" src="/assets/icon/contact/github.svg" alt="icon-github" />
+          <img class="contacts__icon" src="/assets/icon/contacts/github.svg" alt="icon-github" />
         </div>
         <a class="contacts__link" :href="contact.github.link" target="_blank">
           {{ contact.github.nickName }}
@@ -32,7 +36,11 @@
       </li>
       <li class="contacts__item">
         <div class="contacts__icon-wrap">
-          <img class="contacts__icon" src="/assets/icon/contact/linkedin.svg" alt="icon-linkedin" />
+          <img
+            class="contacts__icon"
+            src="/assets/icon/contacts/linkedin.svg"
+            alt="icon-linkedin"
+          />
         </div>
         <a class="contacts__link" :href="contact.linkedIn.link" target="_blank">
           {{ contact.linkedIn.nickName }}

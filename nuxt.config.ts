@@ -4,7 +4,6 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
   css: ['@/assets/style/_main.scss'],
   vite: {
-    base: '/',
     css: {
       preprocessorOptions: {
         scss: {
