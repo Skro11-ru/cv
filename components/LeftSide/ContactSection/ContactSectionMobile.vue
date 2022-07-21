@@ -39,7 +39,7 @@ import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
 
 const store = useCVStore();
 const contact = computed(() => store.getMyCV.contact);
-const iconPath = (nameIcon) => `./assets/icon/information/${nameIcon}.svg`;
+const iconPath = (nameIcon) => `/assets/icon/information/${nameIcon}.svg`;
 </script>
 
 <style lang="scss" scoped>

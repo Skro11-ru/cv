@@ -23,8 +23,8 @@ import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
 
 const store = useCVStore();
 const language = computed(() => store.getMyCV.language);
-const pathFlagLanguage = (label) => `./assets/icon/language/${label}.svg`;
-const iconPath = (nameIcon) => `./assets/icon/information/${nameIcon}.svg`;
+const pathFlagLanguage = (label) => `/assets/icon/language/${label}.svg`;
+const iconPath = (nameIcon) => `/assets/icon/information/${nameIcon}.svg`;
 </script>
 
 <style lang="scss" scoped>

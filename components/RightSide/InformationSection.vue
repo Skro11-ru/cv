@@ -79,7 +79,7 @@
 <script setup lang="ts">
 import TimeLine from '~/components/TimeLine.vue';
 
-const iconPath = (nameIcon) => `./assets/icon/information/${nameIcon}.svg`;
+const iconPath = (nameIcon) => `/assets/icon/information/${nameIcon}.svg`;
 import { useCVStore } from '~/store/store';
 import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
 import ContactSectionMobile from '~/components/LeftSide/ContactSection/ContactSectionMobile.vue';

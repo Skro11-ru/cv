@@ -19,7 +19,7 @@ import LeftSideTitle from '~/components/LeftSide/LeftSideTitle.vue';
 
 const store = useCVStore();
 const language = computed(() => store.getMyCV.language);
-const pathFlagLanguage = (label) => `./assets/icon/language/${label}.svg`;
+const pathFlagLanguage = (label) => `/assets/icon/language/${label}.svg`;
 </script>
 
 <style lang="scss" scoped>
