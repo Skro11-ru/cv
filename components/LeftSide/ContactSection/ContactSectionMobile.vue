@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import { useCVStore } from '~/store/store';
 import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
-import iconPath from '~/helpers/iconPath';
+import iconPath from '~/helpers/iconPath.js';
 
 const store = useCVStore();
 const contact = computed(() => store.getMyCV.contact);
