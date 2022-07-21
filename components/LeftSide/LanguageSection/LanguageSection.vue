@@ -15,7 +15,7 @@ import LeftSideTitle from '~/components/LeftSide/LeftSideTitle.vue';
 
 const store = useCVStore();
 const language = computed(() => store.getMyCV.language);
-import iconPath from '~/helpers/iconPath';
+import iconPath from '~/helpers/iconPath.js';
 </script>
 
 <style lang="scss" scoped>
