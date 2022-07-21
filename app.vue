@@ -14,7 +14,7 @@
             {{ position }}
           </span>
         </div>
-        <img class="right-side__logo" src="@/assets/image/photo.png" alt="logo" />
+        <img class="right-side__logo" src="@/assets/image/photo.jpg" alt="logo" />
       </div>
 
       <InformationSection />
