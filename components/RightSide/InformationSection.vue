@@ -84,7 +84,7 @@ import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
 import ContactSectionMobile from '~/components/LeftSide/ContactSection/ContactSectionMobile.vue';
 import SkillsSectionMobile from '~/components/LeftSide/SkillsSection/SkillsSectionMobile.vue';
 import LanguageSectionMobile from '~/components/LeftSide/LanguageSection/LanguageSectionMobile.vue';
-import iconPath from '~/iconPath';
+import iconPath from '~/helpers/iconPath';
 
 const store = useCVStore();
 const educationList = store.getMyEducationList;

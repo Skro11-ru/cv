@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
-import iconPath from '~/iconPath';
+import iconPath from '~/helpers/iconPath';
 </script>
 
 <style lang="scss" scoped>
