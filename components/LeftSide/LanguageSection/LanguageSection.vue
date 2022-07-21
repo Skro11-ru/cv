@@ -3,7 +3,7 @@
     <LeftSideTitle title="Знание языков" />
     <ul class="language__list">
       <li v-for="item in language" :key="item.id" class="language__item">
-        <img class="language__flag" :src="iconPath(item.label)" :alt="`${item.label}-flag`" />
+        <!--        <img class="language__flag" :src="iconPath(item.label)" :alt="`${item.label}-flag`" />-->
         <span class="language__text"> {{ item.name }} - {{ item.level }} </span>
       </li>
     </ul>
@@ -15,7 +15,7 @@ import LeftSideTitle from '~/components/LeftSide/LeftSideTitle.vue';
 
 const store = useCVStore();
 const language = computed(() => store.getMyCV.language);
-import iconPath from '~/iconPath';
+// import iconPath from '~/iconPath';
 </script>
 
 <style lang="scss" scoped>
