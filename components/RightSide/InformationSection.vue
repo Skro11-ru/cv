@@ -84,12 +84,27 @@ import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
 import ContactSectionMobile from '~/components/LeftSide/ContactSection/ContactSectionMobile.vue';
 import SkillsSectionMobile from '~/components/LeftSide/SkillsSection/SkillsSectionMobile.vue';
 import LanguageSectionMobile from '~/components/LeftSide/LanguageSection/LanguageSectionMobile.vue';
-import iconPath from '~/helpers/iconPath.js';
 
 const store = useCVStore();
 const educationList = store.getMyEducationList;
 const workExperienceList = store.getMyWorkExperienceList;
 const aboutMe = store.getAboutMe;
+const iconPath = (nameIcon) => {
+  const svgs = import.meta.globEager('/assets/**/*.svg');
+  const pathIcon = Object.keys(svgs).filter((item) => item.includes(`${nameIcon}.svg`));
+  switch (pathIcon.length) {
+    case 0:
+      console.error(`Ошибка в получаемом пути файла, проверьте наличие файла с именем ${nameIcon}`);
+      return '';
+    case 1:
+      // @ts-ignore
+      return svgs[pathIcon].default;
+    default:
+      return console.error(
+        `Ошибка в получаемом пути файла, проверьте имя ${nameIcon} на уникальность `,
+      );
+  }
+};
 </script>
 
 <style lang="scss" scoped>

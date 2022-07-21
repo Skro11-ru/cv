@@ -47,7 +47,22 @@
 
 <script setup lang="ts">
 import RightSideTitle from '~/components/RightSide/RightSideTitle.vue';
-import iconPath from '~/helpers/iconPath.js';
+const iconPath = (nameIcon) => {
+  const svgs = import.meta.globEager('/assets/**/*.svg');
+  const pathIcon = Object.keys(svgs).filter((item) => item.includes(`${nameIcon}.svg`));
+  switch (pathIcon.length) {
+    case 0:
+      console.error(`Ошибка в получаемом пути файла, проверьте наличие файла с именем ${nameIcon}`);
+      return '';
+    case 1:
+      // @ts-ignore
+      return svgs[pathIcon].default;
+    default:
+      return console.error(
+        `Ошибка в получаемом пути файла, проверьте имя ${nameIcon} на уникальность `,
+      );
+  }
+};
 </script>
 
 <style lang="scss" scoped>
