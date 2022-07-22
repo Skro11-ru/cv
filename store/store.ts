@@ -79,7 +79,7 @@ export const useCVStore = defineStore({
           'Желаю стать частью дружной и профессиональной команды, в которой я мог бы развивать свои навыки разработки для достижения командных результатов.',
         contact: {
           address: 'Россия, гор. Томск',
-          phone: '+7-999-495-1234',
+          phone: '+✲-✲✲✲-✲✲✲-✲✲✲✲',
           mail: 'bunetskydn@gmail.com',
           linkedIn: {
             nickName: 'DmitryBunetsky',

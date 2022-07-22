@@ -5,7 +5,23 @@
     <ul class="contacts__list">
       <li class="contacts__item">
         <img class="contacts__icon" src="/assets/icon/contacts/phone.svg" alt="icon-phone" />
-        <a class="contacts__link" :href="`tel:${contact.phone}`">{{ contact.phone }} </a>
+        <a class="contacts__link" :href="`tel:${contact.phone}`">
+          {{ contact.phone }}
+        </a>
+        <button class="contacts__button-show-phone" @click="showPhone">
+          <img
+            v-if="!isShowPhone"
+            class="contacts__icon"
+            src="/assets/icon/contacts/visible_on.svg"
+            alt="icon-visible"
+          />
+          <img
+            v-else
+            class="contacts__icon"
+            src="/assets/icon/contacts/visible_off.svg"
+            alt="icon-visible"
+          />
+        </button>
       </li>
       <li class="contacts__item">
         <img class="contacts__icon" src="/assets/icon/contacts/mail.svg" alt="icon-mail" />
@@ -55,6 +71,21 @@ const iconPath = (nameIcon) => {
       );
   }
 };
+let isShowPhone = ref(false);
+
+const showPhone = () => {
+  isShowPhone.value = !isShowPhone.value;
+  if (isShowPhone.value) {
+    const firstNumber = 7;
+    store.myCV.contact.phone = `+${firstNumber}-${firstNumber + 2}${firstNumber + 2}${
+      firstNumber + 2
+    }-${firstNumber - 3}${firstNumber + 2}${firstNumber - 2}-${firstNumber - 6}${firstNumber - 5}${
+      firstNumber - 4
+    }${firstNumber - 3}`;
+  } else {
+    store.myCV.contact.phone = '+✲-✲✲✲-✲✲✲-✲✲✲✲';
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -64,7 +95,7 @@ const iconPath = (nameIcon) => {
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
     grid-column-gap: 0;
     grid-row-gap: 10px;
     padding: 0 25px;
@@ -87,6 +118,15 @@ const iconPath = (nameIcon) => {
 
   &__link {
     @include link($color-secondary);
+  }
+
+  &__button-show-phone {
+    width: 30px;
+    margin-left: 5px;
+    @include transition;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 </style>

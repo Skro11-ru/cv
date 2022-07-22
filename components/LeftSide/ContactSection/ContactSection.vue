@@ -6,7 +6,23 @@
         <div class="contacts__icon-wrap">
           <img class="contacts__icon" src="/assets/icon/contacts/phone.svg" alt="icon-phone" />
         </div>
-        <a class="contacts__link" :href="`tel:${contact.phone}`">{{ contact.phone }} </a>
+        <a class="contacts__link contacts__phone" :href="`tel:${contact.phone}`">
+          {{ contact.phone }}
+        </a>
+        <button class="contacts__button-show-phone" @click="showPhone">
+          <img
+            v-if="!isShowPhone"
+            class="contacts__icon"
+            src="/assets/icon/contacts/visible_on.svg"
+            alt="icon-visible"
+          />
+          <img
+            v-else
+            class="contacts__icon"
+            src="/assets/icon/contacts/visible_off.svg"
+            alt="icon-visible"
+          />
+        </button>
       </li>
       <li class="contacts__item">
         <div class="contacts__icon-wrap">
@@ -56,6 +72,21 @@ import LeftSideTitle from '~/components/LeftSide/LeftSideTitle.vue';
 
 const store = useCVStore();
 const contact = computed(() => store.getMyCV.contact);
+let isShowPhone = ref(false);
+
+const showPhone = () => {
+  isShowPhone.value = !isShowPhone.value;
+  if (isShowPhone.value) {
+    const firstNumber = 7;
+    store.myCV.contact.phone = `+${firstNumber}-${firstNumber + 2}${firstNumber + 2}${
+      firstNumber + 2
+    }-${firstNumber - 3}${firstNumber + 2}${firstNumber - 2}-${firstNumber - 6}${firstNumber - 5}${
+      firstNumber - 4
+    }${firstNumber - 3}`;
+  } else {
+    store.myCV.contact.phone = '+✲-✲✲✲-✲✲✲-✲✲✲✲';
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -86,6 +117,19 @@ const contact = computed(() => store.getMyCV.contact);
 
   &__link {
     @include link($color-primary);
+  }
+
+  &__phone {
+    width: 150px;
+  }
+
+  &__button-show-phone {
+    width: 30px;
+    margin-left: 5px;
+    @include transition;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 </style>
