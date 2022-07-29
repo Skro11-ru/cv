@@ -17,7 +17,6 @@ export interface IGithub {
 
 export interface IContact {
   address: string;
-  phone: string;
   mail: string;
   linkedIn: ILinkedIn;
   telegram: ITelegram;
@@ -79,7 +78,6 @@ export const useCVStore = defineStore({
           'Желаю стать частью дружной и профессиональной команды, в которой я мог бы развивать свои навыки разработки для достижения командных результатов.',
         contact: {
           address: 'Россия, гор. Томск',
-          phone: '+✲-✲✲✲-✲✲✲-✲✲✲✲',
           mail: 'bunetskydn@gmail.com',
           linkedIn: {
             nickName: 'DmitryBunetsky',
